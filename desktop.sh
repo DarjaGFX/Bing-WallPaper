@@ -7,8 +7,7 @@ cat de>>uri
 tr -d '\n' <uri >urm
 tr -d '"' <urm >ur
 cat ur | xargs -0 curl >background.jpg
-# replace your userName vs {{HostName}}
-gsettings set org.gnome.desktop.background picture-uri file:///home/{{HostName}}/background.jpg
+gsettings set org.gnome.desktop.background picture-uri file://$HOME/d.jpg
 rm ur
 rm urm
 rm uri
